@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"  name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/stylenav.css'%}">
+
+</head>
+<body>
+    <div class="navbar">
+			<a href= "{% url 'booksadmin' %}"> Home </a>
+             <a href= "{% url 'addbook' %}"> Add Book </a>
+             <a  href="{% url 'updateUser' %}"> update user </a>
+             <a href="{% url 'logout' %}"> logout </a>
+                <form method="GET" action ="{% url 'booksadmin' %}">
+                    <input id = 'search' type="search" name="searchName" placeholder="search by book name">
+                    <button type="submit">search </button>
+                </form>
+	</div>
+</body>
+</html>

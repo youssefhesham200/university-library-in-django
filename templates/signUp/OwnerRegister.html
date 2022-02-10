@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/styleregister.css' %}">
+</head>
+<body>
+<div class="intro">
+        <h2> Fill form to register as admin </h2>
+    <form action="{% url 'OwnerRegister' %}" method="POST">
+        {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Register" id = 'but'>
+    </form>
+    </div>
+</body>
+</html>

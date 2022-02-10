@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/stylenav.css'%}">
+</head>
+<body>
+    <div class="navbar">
+			<a href= "{% url 'booksstudent' %}"> Home </a>
+            <a  href="{% url 'updateStudent' %}"> update user </a>
+             <a href="{% url 'logout' %}"> logout </a>
+                <form method="GET" action ="{% url 'booksstudent' %}">
+                    <input id = 'search' type="search" name="searchName" placeholder="search by book name">
+                    <button type="submit"> search </button>
+                </form>
+	</div>
+</body>
+</html>

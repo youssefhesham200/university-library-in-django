@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/stylebooks.css'%}">
+</head>
+<body>
+<style>
+    .operation a{
+        text-decoration: none;
+        display: block;
+        float: left;
+        color: black;
+        text-align: center;
+        padding: 10px;
+        margin-top: 10px;
+        margin-right: 30px;
+        font-size: 25px;
+    }
+</style>
+{% include 'parts/nav.html' %}
+{% for foo in book %}
+<div class="book">
+    <div class="img">
+        <img src="{% static 'images/book_icon.png'%}">
+    </div>
+    <div class="content">
+        <h2>book name : {{ foo.bookName }}</h2>
+        <h3>author : {{ foo.author }}</h3>
+        <h3>ISBN : {{ foo.isbn }}</h3>
+        <h3>publication year : {{ foo.pop }}</h3>
+        <h3>status: {{ foo.status}}</h3>
+        <h3>borrowing period: {{ foo.returning}}</h3>
+        <h3 class="operation"><a href= "{% url 'updateBook' foo.id %}"> update </a></h3>
+    </div>
+</div>
+{% endfor %}
+
+</body>
+</html>

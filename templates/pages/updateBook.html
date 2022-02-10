@@ -1,0 +1,18 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/formstyle.css' %}">
+</head>
+
+<body>
+<div class="intro">
+    <form method="POST" >
+        {% csrf_token %}
+         {{ form }}
+            <input style="width: 400px" type="submit" value="save" id = 'but' onclick="window.open('{% url 'booksadmin' %}')">
+    </form>
+    </div>
+</body>
+</html>

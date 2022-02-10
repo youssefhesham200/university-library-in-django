@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>extend</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/formstyle.css'%}">
+</head>
+<body>
+{% include 'parts/navstudent.html' %}
+<div class="intro">
+    <h2> Update your borrowing period</h2>
+<form method="POST" >
+        {% csrf_token %}
+         {{ form }}
+            <input style="width: 400px" type="submit" value="save" id = 'but' onclick="window.open('{% url 'booksstudent' %}')">
+    </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+.navbar{
+  overflow: hidden;
+  margin-bottom: 20px;
+  height: 5%;
+  background-color: #1a1919;
+  border-radius: 1px;
+}
+
+.navbar a{
+text-decoration: none;
+  display: block;
+float: left;
+color: white;
+text-align: center;
+  padding: 10px;
+  margin-right: 30px;
+  font-size: 25px;
+}
+
+.navbar form{
+  float: right;
+}
+.navbar form button{
+  float: right;
+  padding: 10px;
+  font-size: 17px;
+  border-left: none;
+  cursor: pointer;
+}
+
+#search{
+  padding: 10px;
+  font-size: 17px;
+  border-radius: 2px ;
+  float: left;
+  background: #f1f1f1;
+}
+a:hover{
+	background-color: orange;
+}

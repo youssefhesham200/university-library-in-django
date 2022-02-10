@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href = "{% static 'css/styleindex.css' %}">
+</head>
+<body>
+ <div class="maincontent">
+            <h1>
+                Sign up for a free account
+            </h1>
+                <h2>tell us who are you</h2>
+            <a href="{% url 'StudentRegister' %}">I’m a Student</a>
+            <a href="{% url 'OwnerRegister' %}">I’m a admin</a>
+        </div>
+</body>
+</html>

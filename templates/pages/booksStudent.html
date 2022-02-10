@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>books for students</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/stylebooks.css'%}">
+</head>
+<body>
+{% include 'parts/navstudent.html' %}
+{% for foo in book %}
+<div class="book" style="width: 45%;">
+    <div class="img">
+        <img src="{% static 'images/book_icon.png'%}">
+    </div>
+    <div class="content" style="padding-top: 38px; ;">
+        <h2>book name : {{ foo.bookName }}</h2>
+        <h3>author : {{ foo.author }}</h3>
+        <h3>ISBN : {{ foo.isbn }}</h3>
+        <h3>publication year : {{ foo.pop }}</h3>
+        <h3>status: {{ foo.status}}</h3>
+        <h3>borrowing period: {{ foo.returning }}</h3>
+        <div id="operation">
+            <h3 ><a  href= "{% url 'updateborrowing' foo.id %}"> borrow </a></h3>
+            <h3 ><a  href= "{% url 'returning' foo.id %}"> return </a></h3>
+            <h3 ><a  href="{% url 'extend' foo.id %}">extend</a></h3>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+</body>
+
+</html>

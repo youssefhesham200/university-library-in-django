@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AddBook</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/formstyle.css' %}">
+</head>
+<body>
+{% include "parts/nav.html" %}
+<div class = "intro">
+    <h2>Fill form to add your book</h2>
+    <form method="POST">
+        {% csrf_token %}
+            {{myform}}
+        <input type="submit" id = 'but'>
+    </form>
+        </div>
+</body>
+</html>
