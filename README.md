@@ -13,6 +13,7 @@ author…)
 10. Log out
 
 this website implemented using 
+
 1- frond-end (html - css - javascript)
 
 2- back-end (django-python)
